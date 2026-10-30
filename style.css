@@ -1,0 +1,331 @@
+/* Reset básico e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #171b1a;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container principal do formulário */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Organização de cada campo */
+.campo {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Estilização dos inputs, select e textarea */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botão de Envio */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Mensagem de dica (para o mouseenter) */
+.dica {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #e67e22;
+    text-align: center;
+    min-height: 20px;
+}
+
+/* --- Estilos do Painel e dos Cards --- */
+
+.card-chamado {
+    background: #f9f9f9;
+    border: 1px solid #e1e8ed;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.tag-status {
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Cores dinâmicas para o status */
+.status-aberto { background: #e67e22; }
+.status-andamento { background: #f39c12; }
+.status-resolvido { background: #2ecc71; }
+
+.card-texto-secundario {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.card-texto-principal {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.card-footer {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Seção de Comentários */
+.secao-comentarios {
+    border-top: 1px solid #ddd;
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.comentario-item {
+    font-size: 0.8rem;
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border-left: 3px solid #3498db;
+}
+
+.comentario-vazio {
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.caixa-comentario-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+    align-items: center; /* Alinha o input e o botão perfeitamente no centro */
+}
+
+.caixa-comentario-input input {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    flex: 1; /* Apenas o flex: 1 já diz para ele ocupar todo o espaço restante */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-comentar {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: auto !important; /* <--- Anula o width: 100% global do button */
+    flex-shrink: 0;
+}
+
+
+/* Botões de Status */
+.card-botoes-status {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.btn-status-andamento {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-status-resolver {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-excluir {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    background: #e74c3c; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-excluir:hover {
+    background: #c0392b; /* Vermelho escuro ao passar o mouse */
+}
+
+.link-evidencia {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #3498db;
+    text-decoration: none;
+    background: #ebf5fb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #aed6f1;
+    max-width: 150px;       /* Limita o tamanho máximo */
+    white-space: nowrap;    /* Impede que quebre feio */
+    overflow: hidden;       /* Esconde o excesso */
+    text-overflow: ellipsis;/* Coloca reticências (...) se o nome for gigante */
+    vertical-align: middle;
+}
+
+.link-evidencia:hover {
+    background: #d4e6f1;
+    text-decoration: underline;
+}
+
+/* --- Estilos do Modal de Imagem --- */
+/* --- Estilos do Modal de Imagem (Com Fade Corrigido) --- */
+.modal {
+    display: flex; /* Mantemos flex, mas controlado pela opacidade */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro fixo */
+    justify-content: center;
+    align-items: center;
+    
+    /* Configuração do Fade */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Quando a classe .ativo for adicionada via JS, ele aparece com fade */
+.modal.ativo {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-conteudo {
+    max-width: 85%;
+    max-height: 85vh;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    object-fit: contain;
+    transform: scale(0.9);
+    transition: transform 0.3s ease; /* Zoom suave da imagem */
+}
+
+/* Quando ativo, a imagem expande suavemente */
+.modal.ativo .modal-conteudo {
+    transform: scale(1);
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-fechar:hover {
+    color: #3498db;
+}

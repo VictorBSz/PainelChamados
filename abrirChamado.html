@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamados TI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="abrirChamado.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Abertura de Chamado</h1>
+
+        <form id="form-chamado">
+            <!-- Campo Nome -->
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            </div>
+
+            <!-- Campo Categoria -->
+            <div class="campo">
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Selecione uma categoria...</option>
+                    <option value="Suporte Técnico">Suporte Técnico</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Sistemas">Sistemas / Software</option>
+                    <option value="Redes">Redes e Conectividade</option>
+                </select>
+            </div>
+
+            <!-- Campo Descrição -->
+            <div class="campo">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o problema em detalhes..."></textarea>
+            </div>
+
+            <!-- Novo campo: Upload de Evidência / Imagem -->
+            <div class="campo">
+                <label for="evidencia">Evidência do Erro (Opcional):</label>
+                <input type="file" id="evidencia" name="evidencia" accept="image/*">
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="campo">
+                <button type="submit" id="btn-enviar">Enviar Chamado</button>
+            </div>
+
+            
+            <p id="mensagem-dica" class="dica"></p>
+        </form>
+    </main>
+
+
+</body>
+</html>

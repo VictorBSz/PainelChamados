@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Chamados Abertos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" style="max-width: 600px;">
+        <h1>Painel de Chamados Abertos</h1>
+
+        <!-- Botão para voltar à página de cadastro -->
+        <div style="margin-bottom: 20px; text-align: right;">
+            <a href="abrirChamado.html" style="text-decoration: none; background-color: #3498db; color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.9rem; font-weight: bold;">+ Novo Chamado</a>
+        </div>
+
+        <hr style="margin-bottom: 20px; border: 0; border-top: 1px solid #ddd;">
+
+        <!-- Área onde os cards dos chamados serão injetados via JavaScript -->
+        <div id="lista-chamados">
+            <!-- Os chamados salvos aparecem aqui dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Modal de Visualização de Imagem -->
+    <div id="modal-imagem" class="modal">
+        <span class="modal-fechar" onclick="fecharModal()">&times;</span>
+        <img class="modal-conteudo" id="img-ampliada" alt="Evidência Ampliada">
+    </div>
+
+    <!-- Script específico do painel -->
+    <script src="index.js" defer></script>
+</body>
+</html>
